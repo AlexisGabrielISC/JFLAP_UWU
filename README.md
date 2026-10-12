@@ -159,3 +159,4 @@ El script compila solo las clases modificadas contra el JAR original y las inser
 - En máquinas de Turing, la negación `!a` no funcionó en las pruebas, igual que en el JAR original (comportamiento heredado).
 - **Edit Block** (menú del nodo) abre el editor de la subrutina del bloque, que está vacío si el bloque es nuevo; no es un editor de propiedades del nodo (para eso usa **Color…** y **Set Name**).
 
+## En caso de encontrar un bug, me lo pueden hacer saber abriendo una rama en el repo.
