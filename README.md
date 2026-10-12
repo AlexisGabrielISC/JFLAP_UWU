@@ -16,6 +16,11 @@ Versión modificada de JFLAP. Esta versión se centra en el editor y el simulado
 java -jar JFLAP_UWU_v4.jar
 ```
 
+## Ejecutar en caso de haber descargado la versión del relase.
+```
+java -jar JFLAP_v4.jar
+```
+
 Tema claro en lugar del oscuro: `java -Djflap.dark=false -jar JFLAP_UWU_v4.jar`
 Alternar el tema en caliente: **Ctrl + Shift + D**.
 
@@ -81,7 +86,7 @@ Pueden usarse solos o dentro de corchetes, combinados con rangos y con negación
 [\dA-F]     dígitos o A–F (hexadecimal)
 [^\d]       cualquier cosa menos dígitos
 [\d\W]      dígitos o caracteres especiales
-[a-z]       rangos
+[a-z], [ABDC], [0875]. etc. rangos
 ```
 
 Notas:
@@ -154,10 +159,3 @@ El script compila solo las clases modificadas contra el JAR original y las inser
 - En máquinas de Turing, la negación `!a` no funcionó en las pruebas, igual que en el JAR original (comportamiento heredado).
 - **Edit Block** (menú del nodo) abre el editor de la subrutina del bloque, que está vacío si el bloque es nuevo; no es un editor de propiedades del nodo (para eso usa **Color…** y **Set Name**).
 
-## Historial
-
-| Versión | Cambios |
-|---|---|
-| v2 | Supr para borrar selección múltiple; botón Auto en el simulador |
-| v3 | Notas legibles y con formato; color de nodos; guardado en `.jff`; deshacer conserva formato |
-| v4 | Alfabetos `\d \D \w \W \s \S` en transiciones de Turing y etiquetas de autómatas finitos |
