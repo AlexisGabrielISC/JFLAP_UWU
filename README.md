@@ -1,7 +1,7 @@
 # JFLAP
 
 ```text
-La modificación echa, fue por el odio que se le tomo a la version de JFLAP :3
+Las modificaciones echas, fue por el odio que se le tomo a la version de JFLAP :3
 ```
 ## Descarga directa.
 
