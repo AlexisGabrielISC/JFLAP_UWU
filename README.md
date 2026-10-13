@@ -3,7 +3,8 @@
 ```text
 La modificación echa, fue por el odio que se le tomo a la version de JFLAP :3
 ```
-
+## Instalación directa
+- 
 Versión modificada de JFLAP. Esta versión se centra en el editor y el simulador de **Máquinas de Turing**, pero varias mejoras aplican a todos los autómatas.
 
 ## Requisitos
