@@ -3,8 +3,19 @@
 ```text
 La modificación echa, fue por el odio que se le tomo a la version de JFLAP :3
 ```
-## Instalación directa
-- 
+## Descarga directa.
+
+Descarga la última versión disponible de **JFLAP UWU**.
+
+<p align="center">
+  <a href="https://github.com/TraceVoid/JFLAP/releases/download/V5/JFLAP_UWU_v5.jar">
+    <img src="https://img.shields.io/badge/Descargar-JFLAP_UWU_v5-blue?style=for-the-badge&logo=github" alt="Descargar JFLAP UWU v5">
+  </a>
+</p>
+
+**Requisitos:** Java instalado en tu sistema.
+
+Consulta también el [repositorio del proyecto](https://github.com/TraceVoid/JFLAP) y sus [releases](https://github.com/TraceVoid/JFLAP/releases).
 Versión modificada de JFLAP. Esta versión se centra en el editor y el simulador de **Máquinas de Turing**, pero varias mejoras aplican a todos los autómatas.
 
 ## Requisitos
