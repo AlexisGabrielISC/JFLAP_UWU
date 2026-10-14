@@ -93,7 +93,7 @@ Pueden usarse solos o dentro de corchetes, combinados con rangos y con negación
 [\dA-F]     dígitos o A–F (hexadecimal)
 [^\d]       cualquier cosa menos dígitos
 [\d\W]      dígitos o caracteres especiales
-[a-z]       rangos (ya existían)
+[ABDC]       rangos
 ```
 
 Notas:
@@ -166,7 +166,7 @@ En States: q0 = Initial, q1 = Final.
 | Supr / Retroceso | Borrar selección (nodos y transiciones) |
 | Ctrl + Z | Deshacer |
 | Ctrl + Shift + Z / Ctrl + Y | Rehacer |
-| 1 … 9 | Elegir la herramienta de la barra del editor (por posición) |
+|Ctrl + 1 … 9 | Elegir la herramienta de la barra del editor (por posición) |
 | Ctrl + Shift + D | Cambiar tema claro/oscuro |
 | Ctrl + Shift + T | Abrir la tabla de reglas (máquinas de Turing) |
 
@@ -179,6 +179,9 @@ En States: q0 = Initial, q1 = Final.
 3. Copia tu JAR original a esa carpeta con el nombre **`JFLAP_UWU.jar`** (necesita la extensión `.jar`).
 4. Ejecuta `build.bat`. Genera **`JFLAP_v5.jar`**.
 
+```NOTA
+En la version actual ya no es tan necesario el realizar esta accion, pero se recomiendo el hacerla para evitar problemas con dependencias en una futura actualización. 
+```
 El script compila solo las clases modificadas contra el JAR original y las inserta en una copia del mismo. El resto del programa queda intacto.
 
 ### Clases modificadas
