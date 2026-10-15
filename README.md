@@ -1,11 +1,10 @@
-# JFLAP
+# JFLAP UWU
 
-```text
-Las modificaciones echas, fue por el odio que se le tomo a la version de JFLAP :3
-```
-## Descarga directa.
+Versión modificada de JFLAP por el odio que se tomo a la primer versión :3.
 
-Descarga la última versión disponible de **JFLAP UWU**.
+## Descarga directa
+
+Descarga la última versión disponible de **JFLAP UWU v6** desde el siguiente enlace:
 
 <p align="center">
   <a href="https://github.com/TraceVoid/JFLAP/releases/download/V6/JFLAP_UWU_v6.jar">
@@ -13,10 +12,7 @@ Descarga la última versión disponible de **JFLAP UWU**.
   </a>
 </p>
 
-**Requisitos:** Java instalado en tu sistema.
-
-Consulta también el [repositorio del proyecto](https://github.com/TraceVoid/JFLAP) y sus [releases](https://github.com/TraceVoid/JFLAP/releases).
-Versión modificada de JFLAP. Esta versión se centra en el editor y el simulador de **Máquinas de Turing**, pero varias mejoras aplican a todos los autómatas.
+También puedes consultar el [repositorio del proyecto](https://github.com/TraceVoid/JFLAP) y sus [releases](https://github.com/TraceVoid/JFLAP/releases).
 
 ## Requisitos
 
@@ -25,10 +21,10 @@ Versión modificada de JFLAP. Esta versión se centra en el editor y el simulado
 ## Ejecutar
 
 ```
-java -jar JFLAP_UWU_v5.jar
+java -jar JFLAP_UWU_v6.jar
 ```
 
-Tema claro en lugar del oscuro: `java -Djflap.dark=false -jar JFLAP_UWU_v5.jar`
+Tema claro en lugar del oscuro: `java -Djflap.dark=false -jar JFLAP_UWU_v6.jar`
 Alternar el tema en caliente: **Ctrl + Shift + D**.
 
 ---
@@ -42,17 +38,33 @@ Selecciona varios nodos y/o transiciones (con el rectángulo de selección o con
 - Se puede deshacer con **Ctrl + Z** (rehacer: Ctrl + Shift + Z o Ctrl + Y).
 - No actúa mientras escribes en una caja de texto o editas una tabla.
 
-### 2. Botón **Auto ▶** en el simulador
+### 2. Botón **Auto ▶**, velocidad y visor de cinta
 
 En la barra inferior de la simulación (junto a Step, Reset, Freeze…):
 
 | Control | Función |
 |---|---|
-| **Auto ▶** | Avanza paso a paso automáticamente. Mientras corre, el botón cambia a **Pause ⏸**. |
-| Campo `ms` | Milisegundos entre pasos (50 – 10000, por defecto 500). Se puede cambiar mientras corre. |
+| **Auto ▶** | Avanza automáticamente. Mientras corre, el botón cambia a **Pause ⏸**. |
+| Campo `ms` | Milisegundos entre ticks. **Mínimo 1 ms** (máximo 10000, por defecto 500). Se puede cambiar mientras corre. |
+| Campo `× steps` | **Pasos de la máquina por tick** (1 – 1 000 000, por defecto 1). La pantalla se refresca una sola vez por tick, así que subirlo acelera mucho las cadenas largas. |
 | Etiqueta de resultado | Muestra **Accepted** o **Rejected** al terminar. |
+| **Tape** | Abre el visor de cinta completa (ver abajo). |
+| **Tape at end** | Si está marcada (por defecto), al terminar Auto se abre solo el visor de cinta. |
 
 Se detiene solo cuando alguna configuración **acepta**, o cuando ya no queda ninguna configuración válida (**rechaza**). **Reset** también lo detiene. Si la máquina entra en un bucle infinito, no se detiene sola: usa **Pause**.
+
+**Velocidad (medido con una máquina que recorre una cadena de `O`):** con 1 ms y 1 paso por tick, 3000 pasos tardaron unos 3.5 s; con 100 pasos por tick, 0.15 s; una cadena de 20 000 caracteres con 2000 pasos por tick terminó en 0.6 s. La velocidad real depende del equipo.
+
+#### Visor de cinta (**Tape**)
+
+La simulación solo dibuja una ventana de la cinta alrededor del cabezal, por lo que en cadenas largas no se ve el resultado final. El visor muestra **toda** la cinta:
+
+- Contenido completo de cada cinta (con ajuste de línea), con el **cabezal resaltado en naranja** y la vista desplazada hasta él.
+- **Content without blanks:** el contenido sin los blancos de los extremos (seleccionable, con botón **Copy content**).
+- **Output (head → next blank):** lo que hay desde el cabezal hasta el siguiente blanco.
+- **Symbol count:** cuántas veces aparece cada símbolo (por ejemplo `# × 1   O × 20000`), útil para máquinas que cuentan.
+- Se actualiza solo con **Step**, **Auto** y **Reset** mientras está abierto.
+- Muestra la configuración seleccionada; si no hay ninguna, la aceptada; si no, las activas. Con varias configuraciones (máquinas no deterministas) aparecen en pestañas.
 
 ### 3. Notas legibles y con formato
 
@@ -93,7 +105,7 @@ Pueden usarse solos o dentro de corchetes, combinados con rangos y con negación
 [\dA-F]     dígitos o A–F (hexadecimal)
 [^\d]       cualquier cosa menos dígitos
 [\d\W]      dígitos o caracteres especiales
-[ABDC]       rangos
+[ABCD]       rangos
 ```
 
 Notas:
@@ -166,23 +178,21 @@ En States: q0 = Initial, q1 = Final.
 | Supr / Retroceso | Borrar selección (nodos y transiciones) |
 | Ctrl + Z | Deshacer |
 | Ctrl + Shift + Z / Ctrl + Y | Rehacer |
-|Ctrl + 1 … 9 | Elegir la herramienta de la barra del editor (por posición) |
+| Ctrl + 1 … 9 | Elegir la herramienta de la barra del editor (por posición) |
 | Ctrl + Shift + D | Cambiar tema claro/oscuro |
 | Ctrl + Shift + T | Abrir la tabla de reglas (máquinas de Turing) |
 
 ---
 
-## Compilar desde las fuentes (Windows)
+## Compilar desde las fuentes (Windows *OPCIONAL*)
 
 1. Instala un **JDK 21+** (por ejemplo Temurin) y comprueba con `javac -version`.
-2. Descomprime `fuentes_v5.zip` en una carpeta.
+2. Descomprime `fuentes_v6.zip` en una carpeta.
 3. Copia tu JAR original a esa carpeta con el nombre **`JFLAP_UWU.jar`** (necesita la extensión `.jar`).
-4. Ejecuta `build.bat`. Genera **`JFLAP_v5.jar`**.
+4. Ejecuta `build.bat`. Genera **`JFLAP_v6.jar`**.
 
-```NOTA
-En la version actual ya no es tan necesario el realizar esta accion, pero se recomiendo el hacerla para evitar problemas con dependencias en una futura actualización. 
-```
 El script compila solo las clases modificadas contra el JAR original y las inserta en una copia del mismo. El resto del programa queda intacto.
+
 
 ### Clases modificadas
 
@@ -192,7 +202,8 @@ El script compila solo las clases modificadas contra el JAR original y las inser
 | `plus/LabelMatcher` | Motor de clases y alfabetos |
 | `plus/RuleTable` (nuevo) | Ventana de la tabla de reglas |
 | `gui/editor/EditorPane` | Botón **Table** en la barra del editor |
-| `gui/sim/ControlPanel`, `ConfigurationController` | Botón Auto y su lógica de aceptar/rechazar |
+| `gui/sim/ControlPanel`, `ConfigurationController` | Botón Auto (1 ms mínimo, varios pasos por tick), botón Tape y lógica de aceptar/rechazar |
+| `plus/TapeViewer` (nuevo) | Visor de cinta completa |
 | `automata/Note` | Notas legibles, menú de formato, tamaño de caja |
 | `automata/State`, `gui/viewer/StateDrawer`, `gui/editor/ArrowTool` | Color de nodos; entrada **Transition table…** del menú del lienzo |
 | `gui/editor/AutomatonSizeSlider` | El zoom respeta la fuente elegida en las notas |
@@ -220,5 +231,6 @@ El script compila solo las clases modificadas contra el JAR original y las inser
 | v3 | Notas legibles y con formato; color de nodos; guardado en `.jff`; deshacer conserva formato |
 | v4 | Alfabetos `\d \D \w \W \s \S` en transiciones de Turing y etiquetas de autómatas finitos |
 | v5 | Tabla de reglas para Máquinas de Turing (transiciones y estados) |
+| v6 | Auto desde 1 ms y varios pasos por tick; visor de cinta completa (Tape) |
 
-## En caso de encontrar un bug, me lo pueden hacer saber abriendo una rama en el repo.
+Cualquier distribución debe incluirla y ser gratuita.
