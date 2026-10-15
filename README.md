@@ -8,8 +8,8 @@ Las modificaciones echas, fue por el odio que se le tomo a la version de JFLAP :
 Descarga la última versión disponible de **JFLAP UWU**.
 
 <p align="center">
-  <a href="https://github.com/TraceVoid/JFLAP/releases/download/V5/JFLAP_UWU_v5.jar">
-    <img src="https://img.shields.io/badge/Descargar-JFLAP_UWU_v5-blue?style=for-the-badge&logo=github" alt="Descargar JFLAP UWU v5">
+  <a href="https://github.com/TraceVoid/JFLAP/releases/download/V6/JFLAP_UWU_v6.jar">
+    <img src="https://img.shields.io/badge/Descargar-JFLAP_UWU_v6-blue?style=for-the-badge&logo=github" alt="Descargar JFLAP UWU v6">
   </a>
 </p>
 
